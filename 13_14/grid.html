@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #name-container {
+            margin-bottom: 20px;
+        }
+        #favorite-site {
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        #favorite-image {
+            margin-bottom: 20px;
+        }
+        #styled-element {
+            margin-top: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .invalid {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+
+<div id="name-container">
+    <div>Иванов Иван Иванович</div>
+</div>
+
+<div id="favorite-site">
+    <a href="https://www.example.com" target="_blank">Любимый сайт</a>
+</div>
+
+<div id="favorite-image">
+    <img src="watch_thumb1.jpg.png" alt="Placeholder Image">
+</div>
+
+<button id="change-style-btn">Сменить стиль</button>
+<div id="styled-element">This element will be styled</div>
+
+<section class="hero">
+    <div class="hero__container container">
+        <h1>Форма регистрации пользователя</h1>
+        <form action="#!" class="form">
+            <label for="name" class="form__label">
+                <span class="form__desc">Ваше имя:</span>
+                <input name="name" type="text" class="form__input">
+            </label>
+            <label for="password" class="form__label">
+                <span class="form__desc">Пароль:</span>
+                <input name="password" type="password" class="form__input">
+            </label>
+            <label for="age" class="form__label">
+                <span class="form__desc">Возраст:</span>
+                <input name="age" type="text" class="form__input">
+            </label>
+            <div for="sex" class="form__sex">
+                <span class="form__desc">Пол:</span>
+                <label for="sex" class="form__sex-label">
+                    <span class="form__desc">Мужской</span>
+                    <input name="sex" type="radio" class="form__radiobutton">
+                </label>
+                <label for="sex" class="form__sex-label">
+                    <span class="form__desc">Женский</span>
+                    <input name="sex" type="radio" class="form__radiobutton">
+                </label>
+            </div>
+            <div for="hobbies" class="form__hobbies">
+                <span class="form__desc">Ваши увлечения:</span>
+                <label for="hobbies" class="form__sex-label">
+                    <span class="form__desc">Музыка</span>
+                    <input name="hobbies" type="checkbox" class="form__checkbox">
+                </label>
+                <label for="hobbies" class="form__hobbies-label">
+                    <span class="form__desc">Видео</span>
+                    <input name="hobbies" type="checkbox" class="form__checkbox">
+                </label>
+                <label for="hobbies" class="form__hobbies-label">
+                    <span class="form__desc">Рисование</span>
+                    <input name="hobbies" type="checkbox" class="form__checkbox">
+                </label>
+            </div>
+            <div class="form__select">
+                <span class="form__desc">Ваша страна:</span>
+                <select name="country" id="country">
+                    <option value="Беларусь" selected disabled>Выберите страну</option>
+                    <option value="Беларусь">Беларусь</option>
+                </select>
+            </div>
+            <div class="form__select">
+                <span class="form__desc">Ваш город:</span>
+                <select name="city" id="city">
+                    <option value="Минск" selected disabled>Выберите город</option>
+                    <option value="Минск">Минск</option>
+                </select>
+            </div>
+            <div class="form__comment">
+                <span class="form__desc">Кратко о себе:</span>
+                <textarea name="comment" id="comment" cols="10" rows="10" placeholder="Краткая информация о себе"></textarea>
+            </div>
+            <div class="form__solve">
+                <span class="form__desc">Решите пример, запишите результат в поле ниже:</span>
+                <div class="form__solve-wrapper solve-form">
+                    <input type="text" class="form__input">
+                    <div class="solve-form__buttons">
+                        <button class="solve-form__button" type="button">Отменить ввод</button>
+                        <button class="solve-form__button" type="submit">Данные подтверждаю</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script>
+    // Получить все формы на странице
+    const forms = document.forms;
+    setTimeout(() => {
+        console.log(forms);
+        alert(`На странице найдено ${forms.length} форм(ы)`);
+    }, 5000);
+
+    // Перестановка элементов 2 и 3
+    const favoriteSite = document.getElementById('favorite-site');
+    const favoriteImage = document.getElementById('favorite-image');
+    
+    favoriteSite.addEventListener('click', () => {
+        favoriteSite.parentNode.insertBefore(favoriteImage, favoriteSite);
+    });
+
+    // Смена стиля по нажатию кнопки
+    const changeStyleBtn = document.getElementById('change-style-btn');
+    const styledElement = document.getElementById('styled-element');
+    
+    changeStyleBtn.addEventListener('click', () => {
+        styledElement.style.backgroundColor = 'yellow';
+        styledElement.style.color = 'blue';
+        styledElement.style.position = 'fixed';
+        styledElement.style.bottom = '0';
+        styledElement.style.right = '0';
+    });
+
+    // Получение информации об ОС клиента
+    setTimeout(() => {
+        const os = navigator.platform;
+        alert(`Операционная система клиента: ${os}`);
+    }, 6000);
+
+    // Валидация формы
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector(".form");
+        form.addEventListener("submit", (event) => {
+            const name = form.querySelector("[name='name']");
+            const password = form.querySelector("[name='password']");
+            const age = form.querySelector("[name='age']");
+            let isValid = true;
+
+            // Валидация имени
+            if (name.value.trim() === "") {
+                name.classList.add("invalid");
+                isValid = false;
+            } else {
+                name.classList.remove("invalid");
+            }
+
+            // Валидация пароля
+            if (password.value.length < 8) {
+                password.classList.add("invalid");
+                isValid = false;
+            } else {
+                password.classList.remove("invalid");
+            }
+
+            // Валидация возраста
+            if (!/^\d+$/.test(age.value) || age.value < 18 || age.value > 100) {
+                age.classList.add("invalid");
+                isValid = false;
+            } else {
+                age.classList.remove("invalid");
+            }
+
+            if (!isValid) {
+                event.preventDefault();
+                alert("Пожалуйста, исправьте ошибки в форме.");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

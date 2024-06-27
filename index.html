@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница с кнопками</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="m1_1_3laba\index.html"><button>Лр1-3</button></a>
+        <a href="m1_!_4laba\index.html"><button>Лр4</button></a>
+        
+        <div class="dropdown">
+            <button class="dropbtn">Лр5-8</button>
+            <div class="dropdown-content">
+                <a href="lab5_6_7_8_flex_and_grid\html.html">Лр5</a>
+                <a href="8_9\index.html">Лр8</a>
+         
+            </div>
+        </div>
+        
+        <a href="8_9\index.html"><button>Лр9</button></a>
+        
+        <div class="dropdown">
+            <button class="dropbtn">Лр10-12</button>
+            <div class="dropdown-content">
+                <a href="10_12LABA\1zd.html">Задание 1</a>
+                <a href="10_12LABA\2zd.html">Задание 2</a>
+                <a href="10_12LABA\3zd.html">Задание 3</a>
+                <a href="10_12LABA\4zd.html">Задание 4</a>
+                <a href="10_12LABA\5zd.html">Задание 5</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropbtn">Лр13-14</button>
+            <div class="dropdown-content">
+                <a href="13_14\grid.html">Задание 1</a>
+              
+            </div>
+        </div>
+    </div>
+</body>
+</html>

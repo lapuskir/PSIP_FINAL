@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Работа со строками</title>
+    <script>
+        // Функция для выполнения задачи
+        function processStrings() {
+            // Создаем строковые переменные s1 и s2
+            let s1 = "Я люблю Беларусь";
+            let s2 = "Я учусь в Политехническом колледже";
+
+            // Определяем длину строки s2
+            let s2Length = s2.length;
+
+            // Выделяем 9-ый символ в строке s1 (нумерация с 0)
+            let ninthCharacter = s1.charAt(8); // в 9-м варианте это символ "Б"
+
+            // Заменяем слово "Беларусь" на "Гродно" в строке s1
+            let modifiedS1 = s1.replace("Беларусь", "Гродно");
+
+            // Выводим результаты
+            document.getElementById("result").innerHTML = "Длина строки s2: " + s2Length + "<br>" +
+                                                            "9-ый символ в строке s1: " + ninthCharacter + "<br>" +
+                                                            "Измененная строка s1: " + modifiedS1;
+        }
+    </script>
+</head>
+<body>
+    <!-- Вызываем функцию processStrings при загрузке страницы -->
+    <script>
+        window.onload = processStrings;
+    </script>
+
+    <!-- Элемент для вывода результатов -->
+    <div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="cssGrid.css">
+    <link rel="stylesheet" href="css_for_microGrid.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="flex-container" >
+        <div class="flex-item item1" ></div>
+        <div class="flex-item item2">2</div>
+        <div class="flex-item item3"> 
+            <div class="nested nested-item">Nested 1</div>
+            <div class="nested nested-item">Nested 2</div>
+        </div>
+        <div class="flex-item item4">4</div>
+        <div class="flex-item item5">5
+            <div class="nested nested-item2">Nested 1</div>
+            <div class="nested nested-item2">Nested 2</div>
+            <div class="nested nested-item2">Nested 3</div>
+        </div>
+        <div class="flex-item item6">6</div>
+        <div class="flex-item item7">7</div>
+        <div class="flex-item item8">8</div>
+        <div class="flex-item item9">9
+            <div class="nested nested-item3">Nested 1</div>
+            <div class="nested nested-item3">Nested 2</div>
+        </div>
+        <div class="flex-item item10">10</div>
+      </div>
+      фиксированая, адаптивная
+      
+
+      <div class="container">
+        <div class="block">1 блок <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In quasi omnis aspernatur adipisci non error fugit eius impedit officiis illo! Incidunt architecto amet veniam earum rem, labore quisquam accusantium fuga. </p></div>
+        <div class="block">2 блок</div>
+        <div class="block">3 блок <img src="D:\PCCIP\lab5_6_7_8_flex_and_grid\pngkey.com-minion-png-148130.png  " alt="Описание изображения"> </div>
+        <div class="block">4 блок</div>
+        <div class="block">5 блок
+            <div class="hero1__container container">
+            <div class="hero__container container">
+                <h1>Регистрация</h1>
+                <form action="#!" class="form">
+                    <label for="name" class="form__label">
+                        
+                        <div for="sex" class="form__sex">
+                            <span class="form__desc">Пол:</span>
+                            <label for="sex" class="form__sex-label">
+                                <span class="form__desc">Мужской</span>
+                                <input name="sex" type="radio" class="form__radiobutton">
+                            </label>
+                            <label for="sex" class="form__sex-label">
+                                <span class="form__desc">Женский</span>
+                                <input name="sex" type="radio" class="form__radiobutton">
+                            </label>
+                        </div>
+
+
+
+                        <span class="form__desc">ФИО:</span>
+                        <input name="name" type="text" class="form__input">
+
+                        <br>
+
+                    </label>
+                        <label for="password" class="form__label">
+                        <span class="form__desc">E-mail:</span>
+                        <input name="password" type="password" class="form__input">
+                    </label>
+
+                    <br>
+
+                    <label for="age" class="form__label">
+                        <span class="form__desc">Повторите E-mail:</span>
+                        <input name="age" type="text" class="form__input">
+                    </label>
+                   
+
+                    <br>
+
+
+
+                </label>
+                <label for="password" class="form__label">
+                <span class="form__desc">Пароль:</span>
+                <input name="password" type="password" class="form__input">
+            </label>
+
+            <br>
+
+            <label for="age" class="form__label">
+                <span class="form__desc">Повторите пароль:</span>
+                <input name="age" type="text" class="form__input">
+            </label>
+
+
+            <br>
+
+
+
+           
+            <div class="form__select">
+    <span class="form__desc">Дата рождения:</span>
+    <select name="day" id="day">
+        <option value="" selected disabled>День</option>
+    </select>
+
+    <select name="month" id="month">
+        <option value="" selected disabled>Месяц</option>
+    </select>
+
+    <select name="year" id="year">
+        <option value="" selected disabled>Год</option>
+    </select>
+</div>
+
+<script>
+    var daySelect = document.getElementById("day");
+    var monthSelect = document.getElementById("month");
+    var yearSelect = document.getElementById("year");
+
+    // Генерация вариантов для дней от 1 до 31
+    for (var i = 1; i <= 31; i++) {
+        var option = document.createElement("option");
+        option.text = i;
+        option.value = i;
+        daySelect.add(option);
+    }
+
+    // Генерация вариантов для месяцев
+    var months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+    for (var i = 0; i < months.length; i++) {
+        var option = document.createElement("option");
+        option.text = months[i];
+        option.value = i + 1; // Нумерация месяцев начинается с 1
+        monthSelect.add(option);
+    }
+
+    // Генерация вариантов для года (например, с 1900 по 2022)
+    var currentYear = new Date().getFullYear();
+    for (var i = currentYear; i >= 1900; i--) {
+        var option = document.createElement("option");
+        option.text = i;
+        option.value = i;
+        yearSelect.add(option);
+    }
+</script>
+            
+
+
+
+                 
+
+    <input type="checkbox" id="checkbox" class="checkbox__input">
+    <label for="checkbox" class="checkbox__label">Я хочу получать сообщения и предложения</label>
+    <br>
+    <input type="checkbox" id="checkbox" class="checkbox__input">
+    <label for="checkbox" class="checkbox__label">Я согласен с условиями использования:</label>
+    <br>
+    <button type="submit" class="form__button">Отправить</button>
+
+
+        </div>
+        
+    </div>
+
+
+   
+    
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Показать текущий месяц</title>
+    <script>
+        function showCurrentMonth() {
+            const currentDate = new Date();
+            const currentMonth = currentDate.getMonth() + 1; // getMonth() возвращает месяцы в диапазоне 0-11, поэтому добавляем 1
+            alert("Текущий месяц: " + currentMonth);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showCurrentMonth()">Показать текущий месяц</button>
+</body>
+</html>

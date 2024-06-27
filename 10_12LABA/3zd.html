@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Работа с массивами</title>
+</head>
+<body>
+    <script>
+        // Создаем массив из 7 целых элементов
+        let arr = [12, 45, 7, 34, 89, 23, 56];
+
+        // Находим максимальный элемент в массиве
+        let maxElement = Math.max(...arr);
+
+        // Копируем исходный массив для вывода
+        let originalArray = arr.slice();
+
+        // Удаляем последний элемент в массиве
+        arr.pop();
+
+        // Выводим исходный массив
+        document.write("Исходный массив: " + originalArray.join(", ") + "<br>");
+
+        // Выводим максимальный элемент
+        document.write("Максимальный элемент: " + maxElement + "<br>");
+
+        // Выводим измененный массив
+        document.write("Измененный массив: " + arr.join(", ") + "<br>");
+    </script>
+</body>
+</html>

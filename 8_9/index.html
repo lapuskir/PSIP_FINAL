@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример страницы с адаптивными блоками разного размера</title>
+    <link rel="stylesheet" type="text/css" href="st.css">
+    <link rel="stylesheet" type="text/css" href="script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        function showAlert() {
+            alert('Внутренний JS!');
+        }
+    </script>
+
+    <script src="operator.js"></script>
+    <script src="script.js"></script> <!--Внешней JS-->
+</head>
+<body>
+    <div class="container">
+        <div class="block block1">
+            <h2>Блок 1</h2>
+            <p>Это содержимое блока 1.</p>
+            <button onclick="showAlert()">Нажми меня</button> <!--2. Внутренний JavaScript (Internal JavaScript)-->
+        </div>
+        <div class="block block2">
+            <h2>Блок 2</h2>
+            <p>Это содержимое блока 2. Этот блок больше других.</p>
+            <button onclick="showAlert()">Нажми меня</button>
+        </div>
+        <div class="block block3">
+            
+            <div class="inner-block">
+                <h3>Внутренний блок 1</h3>
+                <p>Содержимое внутреннего блока 1.</p>
+            </div>
+            <div class="inner-block">
+                <h3>Внутренний блок 2</h3>
+                <p>Содержимое внутреннего блока 2.</p>
+            </div>
+            
+        </div>
+        <div class="block block4">
+            <h2>Блок 4</h2>
+            <p>Это содержимое блока 4.</p>
+
+            <button id="myButton">Нажми меня</button> <!--4. В JavaScript через атрибуты (JavaScript via Attributes)-- ДОБАВИТЬ URL СХЕМУ И ОПЕРАТОРЫ ВСТРОЕННЫЕ И ПРОВЕРКА УСЛОВия>-->
+    <script>
+        document.getElementById('myButton').onclick = function() { 
+            alert('JavaScript через атрибуты!');
+        };
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const mainImage = document.getElementById('main-image');
+        const thumbnails = document.querySelectorAll('.thumbnail-slider img');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                mainImage.src = thumbnail.src;
+            });
+        });
+    });
+</script>
+
+
+</head>
+<body>
+<div class="product-card">
+    <div class="image-section">
+        <img id="main-image" src="watch_thumb1.jpg.png" alt="Основное изображение часов">
+        <div class="thumbnail-slider">
+            <img src="watch_thumb1.jpg.png" alt="Миниатюра 1">
+            <img src="watch_thumb2.jpg.png" alt="Миниатюра 2">
+            <img src="watch_thumb3.jpg.png" alt="Миниатюра 3">
+            <img src="watch_thumb4.jpg.png" alt="Миниатюра 4">
+            <img src="watch_thumb5.jpg.png" alt="Миниатюра 5">
+        </div>  
+    </div>
+    <div class="text-section">
+        <h2>Original Version of Some product name</h2>
+        
+        <p>
+            <strong>USD</strong> $139.90
+            <span class="price-rating">
+                <span class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </span>
+                <span class="rating-span">7/10</span>
+            </span>
+
+            
+            <div class="color-selector">
+                <p>COLOR</p>
+                <div class="color-option" data-color="Red" style="background-color: red;"></div>
+                <div class="color-option" data-color="Blue" style="background-color: blue;"></div>
+                <div class="color-option" data-color="Green" style="background-color: green;"></div>
+                <div class="color-option" data-color="Black" style="background-color: black;"></div>
+            </div>
+          
+        
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const colorOptions = document.querySelectorAll('.color-option');
+                    const selectedColorText = document.getElementById('selected-color');
+        
+                    colorOptions.forEach(option => {
+                        option.addEventListener('click', () => {
+                            colorOptions.forEach(opt => opt.classList.remove('selected'));
+                            option.classList.add('selected');
+                            selectedColorText.textContent = `Selected Color: ${option.getAttribute('data-color')}`;
+                        });
+                    });
+                });
+            </script>
+        
+
+        <div class="selector-container size-selector">
+            <p>SIZE</p>
+            <div class="size-option" data-size="SM">SM</div>
+            <div class="size-option" data-size="MD">MD</div>
+            <div class="size-option" data-size="XL">XL</div>
+        </div>
+
+        
+
+
+        
+        <div class="quantity-selector">
+            <p clAA ="pQuant">QUANTITY</p>
+            <button class="quantity-btn_L" id="decrease">-</button>
+           <span id="quantity">1</span>
+           <button class="quantity-btn_R" id="increase">+</button>
+       </div>
+
+
+       <div class="extra">
+        <p class="extra-title">EXTRA</p>
+        <p class="extra-shipping">Shipping cost 20$</p>
+    </div>
+    
+
+
+
+    <div class="button-container">
+        <button class="action-button" id="add-to-cart">ADD TO CART</button>
+        <button class="action-button" id="send-inquiry">SEND INQUIRY</button>
+    </div>
+    
+
+    </div>
+
+    
+</div>
+
+
+
+
+        </div>
+        <div class="block block5">
+         
+
+            <div class="inner-block">
+                <h3>Внутренний блок 1</h3>
+                <p>Содержимое внутреннего блока 1.</p>
+            </div>
+            <div class="inner-block">
+                <h3>Внутренний блок 2</h3>
+                <p>Содержимое внутреннего блока 2.</p>
+            </div>
+            <div class="inner-block">
+                <h3>Внутренний блок 2</h3>
+                <p>Содержимое внутреннего блока 2.</p>
+            </div>
+
+        </div>
+        <div class="block block6">
+            <h2>Блок 6</h2>
+            <p>Это содержимое блока 6.</p>
+        </div>
+        <div class="block block7">
+            <h2>Блок 7</h2>
+            <p>Это содержимое блока 7. Этот блок меньше других.</p>
+        </div>
+        <div class="block block8">
+            <h2>Блок 8</h2>
+            <p>Это содержимое блока 8.</p>
+        </div>
+        <div class="block block9">
+            <div class="inner-block">
+                <h3>Внутренний блок 1</h3>
+                <p>Содержимое внутреннего блока 1.</p>
+            </div>
+            <div class="inner-block">
+                <h3>Внутренний блок 2</h3>
+                <p>Содержимое внутреннего блока 2.</p>
+            </div>
+        </div>
+        <div class="block block10">
+            <button onclick="alert('Встроенный JS!')">Нажми меня</button> <!-- Встроенный JavaScript (Inline JavaScript)--> 
+            
+            <!-- В этом примере:
+            URL-схема используется в <a href="https://example.com">Ссылка на Example.com</a>, 
+            чтобы создать ссылку на внешний сайт.
+            Условная логика реализована с помощью JavaScript. 
+            Проверяется условие condition, и в зависимости от его значения, 
+            в элемент с идентификатором conditional-content вставляется соответствующий контент-->
+
+            <h1>Пример с URL схемой и проверкой условий</h1>
+
+            <!-- Пример URL схемы -->
+            <a href="https://example.com">Ссылка на Example.com</a>
+        
+            <br><br>
+        
+            <!-- Пример условной логики с JavaScript -->
+            <div id="conditional-content"></div>
+        
+            <script>
+                // Условие для проверки
+                const condition = true;
+        
+                // Получаем элемент для вставки контента
+                const contentElement = document.getElementById('conditional-content');
+        
+                // Проверяем условие и вставляем соответствующий контент
+                if (condition) {
+                    contentElement.innerHTML = '<p>Условие истинно!</p>';
+                } else {
+                    contentElement.innerHTML = '<p>Условие ложно!</p>';
+                }
+            </script>
+
+
+
+
+
+            
+        </div>
+    </div>
+</body>
+</html>

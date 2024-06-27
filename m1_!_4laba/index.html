@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Описание веб-сайта">
+    <meta name="keywords" content="ключевые, слова, для, поиска">
+    <meta name="author" content="Автор веб-сайта">
+    <title>Защита ЛР1-3</title>
+    <link rel="stylesheet" href="styles.css">
+
+       <style>
+        /* Внутренние стили */
+        p {
+            color: green;
+        }
+    </style>
+ 
+</head>
+<body>
+    <h1 align = "center">Оформление текста</h1>
+    <h3 align = "center">(абзац, курсив, подчеркнутый, перечеркнутый и тд)</h3>
+    
+
+    <p style="font-size: 20px; text-decoration: underline;">Этот текст имеет инлайн-стили</p>
+
+
+    <p>Пример абзаца в html</p>
+    <p>Этот текст <strong>жирный</strong>.</p>
+    <p>Этот текст также <b>жирный</b>.</p>
+    <p>Этот текст <em>курсивом</em>.</p>
+    <p>Этот текст также <i>курсивом</i>.</p>
+    <p>Этот текст <u>подчеркнутый</u>.</p>
+    <p>Этот текст <s>перечеркнутый</s>.</p>
+    <p>Этот текст также <strike>перечеркнутый</strike>.</p>
+    
+    <ul>
+        <li>Элемент списка 1</li>
+        <li>Элемент списка 2</li>
+    </ul>
+    
+    <ol>
+        <li>Нумерованный элемент 1</li>
+        <li>Нумерованный элемент 2</li>
+    </ol>
+
+    <blockquote>
+        <p>Это блочная цитата.</p>
+    </blockquote>
+    
+    <p>Это <q>строчная цитата</q>.</p>
+    
+    <h1 align = "center">Мои навыки</h1>
+    <ul>
+        <li>Ходить</li>
+        <li>Бегать </li>
+        <li>Сидеть</li>
+        <li>Лежать</li>
+        <li>Читать</li>
+    </ul>
+
+    <h1 align = "center">Мои любимые ЯП</h1>
+    <ol>
+        <li>Python</li>
+        <li>C#</li>
+        <li>C++</li>
+    </ol>
+
+    <h1 align = "center">Мои любимые технологии</h1>
+    <ol>
+        <li>Интернет</li>
+        <li>Телефон</li>
+        <li>Ноутбук</li>
+    </ol>
+
+
+    <h1 align = "center">Пример изображения в HTML</h1>
+
+    <!-- Путь к изображению указывается в атрибуте src -->
+    
+    <div class="container">
+        <img src="D:\PCCIP\m1_1_3laba/r1.jfif" alt="Картинка">
+        <p>Текст справа от картинки, я использовал гибкий контейнер с flex.</p>
+    </div>
+    
+
+    <h1>Мои любимые исполнители</h1>
+    
+    <audio controls>
+        <source src="D:\PCCIP\m1_1_3laba/les-jivoy-letniy-utrenniy.mp3" type="audio/mp3">
+        Ваш браузер не поддерживает аудио элемент.
+    </audio>
+
+    <h1>Мои любимые фильмы</h1>
+
+    <video controls width="480" height="360">
+        <source src="D:\PCCIP\m1_1_3laba/clock_-_6066 (360p).mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео элемент.
+    </video>
+
+    <h1>Таблица с объединением ячеек</h1>
+
+    <table border="1">
+        <tr>
+            <td rowspan="2">Ячейка 1</td>
+            <td colspan="2">Ячейка 2 и 3</td>
+        </tr>
+        <tr>
+            <td>Ячейка 4</td>
+            <td>Ячейка 5</td>
+        </tr>
+    </table>
+
+    <h1>Анкета</h1>
+
+    <form>
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+
+        <fieldset>
+            <legend>Выбор пола</legend>
+          
+            <div>
+              <input type="checkbox" id="Женский" name="Женский" checked />
+              <label for="Женский">Женский</label>
+            </div>
+          
+            <div>
+              <input type="checkbox" id="Мужской" name="Мужской" />
+              <label for="Мужской">Мужской</label>
+            </div>
+          </fieldset>
+          
+
+          <p>Выберите цвет который вам больше подхоит:</p>
+
+          <div>
+            <input type="color" id="Красный" name="Красный" value="#e66465" />  
+          </div>
+          
+        <label for="email">Введите ваш email например example.com email:</label>
+        <input type="email" id="email" pattern=".+@example\.com" size="30" required />   <br />
+          
+        <label for="Ваша дата рождения">Ваша дата рождения:</label>
+        <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31" />
+        
+
+        <fieldset>
+            <legend>ЯП на котором вы пишите </legend>
+          
+            <div>
+              <input type="radio" id="huey" name="drone" value="huey" checked />
+              <label for="Python">Python</label>
+            </div>
+          
+            <div>
+              <input type="radio" id="dewey" name="drone" value="dewey" />
+              <label for="C#">C#</label>
+            </div>
+          
+            <div>
+              <input type="radio" id="louie" name="drone" value="louie" />
+              <label for="C++">C++</label>
+        </fieldset>
+
+        <br />
+        <input type="submit" value="Отправить">
+    </form>
+
+    <h1>Мои социальные сети</h1>
+
+    <ul>
+        <li><a href="ссылка_на_facebook">Facebook</a></li>
+        <li><a href="ссылка_на_twitter">Twitter</a></li>
+        <li><a href="ссылка_на_github">GitHub</a></li>
+    </ul>
+
+    <h1>Внутренние ссылки</h1>
+
+    <a href="#section1">Перейти к разделу 1</a>
+    <a href="#section2">Перейти к разделу 2</a>
+
+    <div id="section1">
+        <!-- Контент раздела 1 -->
+    </div>
+
+    <div id="section2">
+        <!-- Контент раздела 2 -->
+    </div>
+
+
+    <h1>Спецсимволы</h1>
+
+    <p>Символ &copy; представляет копирайт</p>
+    <p>Символ &lt; представляет знак "меньше чем"</p>
+    <p>Символ &gt; представляет знак "больше чем"</p>
+
+    <header>
+        <h1>Заголовок страницы</h1>
+        <nav>
+            <ul>
+                <li><a href="#section1">Раздел 1</a></li>
+                <li><a href="#section2">Раздел 2</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="section1">
+        <article>
+            <h2>Статья 1</h2>
+            <p>Содержание статьи 1.</p>
+        </article>
+    </section>
+
+    <section id="section2">
+        <article>
+            <h2>Статья 2</h2>
+            <p>Содержание статьи 2.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>© 2024 Моя страница</p>
+    </footer>
+
+</body>
+</html>

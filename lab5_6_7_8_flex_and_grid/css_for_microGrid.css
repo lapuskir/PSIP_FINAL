@@ -1,0 +1,42 @@
+
+.hero__container {
+    display: grid;
+    background-color: #fff;
+    height: 500px;
+    width: 900px;    
+   
+}
+.hero__container1 {
+    display: grid;
+    background-color: #fff;
+    height: 500px;
+    width: 900px;    
+   
+}
+
+.form { 
+    margin-left: 10%;
+}
+
+.checkbox__container {
+    display: flex;
+    align-items: center;
+    
+}
+
+.checkbox__input {
+    margin-left: 10px;
+}
+
+
+.form__button {
+    width: fit-content;
+            padding: 10px;
+            background-color: #fe4141;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin: 10px 10px 40px 40px;
+
+}       
+

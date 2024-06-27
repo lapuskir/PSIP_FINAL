@@ -1,0 +1,131 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px;
+    
+  }
+  
+  .flex-item {
+    border: 3px solid #ffffff;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative; /* позиционирование относительно нормального потока */
+    top: 10px; /* смещение сверху */
+    left: 10px; /* смещение слева */
+    position: relative;
+    width: 1000%;
+    overflow: hidden; /* или 'hidden', если вы не хотите показывать полосы прокрутки */
+    background-color: rgba(143, 255, 32, 0.647);
+  }
+  
+  .nested {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative; /* Удаляем absolute positioning */
+    width: 100%; /* Ширина 100% для корректного отображения внутри .grid-item */
+    height: 60px;
+    background-color: rgba(128, 255, 0, 0.892);
+  }
+  
+  .nested-item {
+    border: 3px solid #ffffff;
+    padding: 10px;
+    margin-top: 5px;
+    width: 95%; 
+    
+    left: 15px;
+    right: 20 px;
+    top: 15px;
+    margin-bottom: 15px;
+    height: 40px;
+  }
+
+
+  .nested-item2 {
+    border: 3px solid #ffffff;
+    padding: 10px;
+    margin-top: 5px;
+    width: 92%; 
+    
+    left: 15px;
+    right: 20 px;
+    top: 15px;
+    margin-bottom: 15px;
+    height: 40px;
+  } 
+
+  .nested-item3 {
+    border: 3px solid #ffffff;
+    padding: 10px;
+    margin-top: 5px;
+    width: 94%; /* Ширина 50% для двух элементов в ряду */
+    
+    left: 15px;
+    right: 20 px;
+    top: 15px;
+    margin-bottom: 15px;
+    height: 40px;
+  }
+  
+  
+  .item1 {
+    width: 100%;
+    height: 120px;
+  }
+  
+  .item2 {
+    width: 25%;
+    height: 180px;
+  }
+  
+  .item3 {
+    width: 75%;
+    height: 180px;
+  }
+
+
+  
+  .item4 {
+    width: 50%;
+    height: 300px;
+  }
+  
+  .item5 {
+    width: 50%;
+    height: 300px;
+  }
+
+
+  .item6 {
+    width: 10%;
+    height: 200px;
+  }
+  
+  .item7 {
+    width: 10%;
+    height: 200px;
+  }
+  
+  .item8 {
+    width: 10%;
+    height: 200px;
+  }
+  
+  .item9 {
+    width: 70%;
+    height: 200px;
+  }
+  
+  .item10 {
+    width: 100%;
+    height: 200px;
+  }
+
+
+
+
+
+  
+
+  
