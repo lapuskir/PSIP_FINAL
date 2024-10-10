@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерфейсные события</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        #dropzone {
+            width: 200px;
+            height: 200px;
+            background-color: lightgrey;
+            border: 2px dashed #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #draggable {
+            width: 50px;
+            height: 50px;
+            background-color: lightcoral;
+            cursor: grab;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Демонстрация интерфейсных событий</h1>
+
+    <!-- События мыши -->
+    <div class="section">
+        <h2>1. События мыши (click)</h2>
+        <button id="mouseEvent">Нажми на меня</button>
+    </div>
+
+    <!-- События клавиатуры -->
+    <div class="section">
+        <h2>2. События клавиатуры (keydown)</h2>
+        <p>Нажмите любую клавишу:</p>
+        <div id="keyboardOutput"></div>
+    </div>
+
+    <!-- Drag & Drop события -->
+    <div class="section">
+        <h2>3. Drag & Drop события</h2>
+        <div id="dropzone">Брось сюда</div>
+        <div id="draggable" draggable="true">Перетащи меня</div>
+    </div>
+
+    <!-- События указателя -->
+    <div class="section">
+        <h2>4. События указателя (pointermove)</h2>
+        <p>Двигайте указатель по экрану:</p>
+        <div id="pointerOutput"></div>
+    </div>
+
+    <!-- События полосы прокрутки -->
+    <div class="section">
+        <h2>5. События полосы прокрутки (scroll)</h2>
+        <div style="height: 800px; background: linear-gradient(to bottom, lightblue, lightgreen);">
+            Прокрутите вниз:
+        </div>
+        <p id="scrollValue"></p>
+    </div>
+
+ 
+
+    <!-- События, связанные с таймером -->
+    <div class="section">
+        <h2>6. События, связанные с таймером (setTimeout)</h2>
+        <button id="startTimer">Запустить таймер (3 секунды)</button>
+    </div>
+
+    <!-- Подключение внешнего JS-файла -->
+    <script src="scripts.js"></script>
+</body>
+</html>
